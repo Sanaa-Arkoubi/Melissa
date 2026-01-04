@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Week 2 – Low-Fidelity Schetsen</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/flexboxes.css">
+  <link rel="stylesheet" href="assets/nav.css">
+  <link rel="stylesheet" href="assets/typography.css">
+
+  <!-- Extra CSS voor Low-Fidelity schetsen -->
+  <style>
+    /* Low-Fidelity Schetsen Sectie */
+    .low-fidelity {
+        margin-top: 60px;
+    }
+
+    .low-fidelity h2 {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+
+    .low-fidelity p {
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
+
+    /* Grid voor schetsen */
+    .sketch-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 24px;
+    }
+
+    /* Kaart styling voor schetsen */
+    .sketch-card {
+        background-color: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .sketch-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+    }
+
+    .sketch-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+    }
+  </style>
+</head>
+
+<body>
+    <  <a href="doc.html" class="back-home-fancy">
+    ← Terug naar mijn documentatie
+</a>
+  
+
+    <div class="container">
+        <div class="title"></div>
+
+        
+
+        <h1>Welkom</h1>
+
+        <!-- Low-Fidelity Schetsen Sectie -->
+        <section class="low-fidelity">
+            <h2>Low-Fidelity Schetsen</h2>
+            <p>Ik heb tijdens dit contactmoment diverse low-fidelity schetsen gemaakt om mijn ideeën visueel te onderzoeken.</p>
+
+            <div class="sketch-card">
+    <img src="public/img/schets1.jpg" alt="Schets 1" onclick="openLightbox(this.src)">
+</div>
+
+<div class="sketch-card">
+    <img src="public/img/schets2.jpg" alt="Schets 2" onclick="openLightbox(this.src)">
+</div>
+
+<div class="sketch-card">
+    <img src="public/img/schets3.jpg" alt="Schets 3" onclick="openLightbox(this.src)">
+</div>
+
+<div class="sketch-card">
+    <img src="public/img/schets4.jpg" alt="Schets 4" onclick="openLightbox(this.src)">
+</div>
+
+        </section>
+
+<section class="card">
+        <h2>PSN projectdocumentatie</h2>
+        <p>Melissa Halat 1 GDM 1</p>
+    </section>
+
+    </div>
+    <!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+function openLightbox(src) {
+    document.getElementById("lightbox").classList.add("active");
+    document.getElementById("lightbox-img").src = src;
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").classList.remove("active");
+}
+
+// ESC sluiten
+document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") closeLightbox();
+});
+</script>
+
+</body>
+</html>

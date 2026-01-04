@@ -1,0 +1,20 @@
+/* ===== FLEX LAYOUTS ===== */
+
+.two-columns {
+  display: flex;
+  gap: 3rem;              /* meer lucht = rustiger */
+  align-items: flex-start;
+}
+
+/* Kolommen */
+.column {
+  flex: 1;
+}
+
+/* Mobiel: onder elkaar */
+@media (max-width: 768px) {
+  .two-columns {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

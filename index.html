@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melissa Halat – Project Documentatie</title>
+
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/nav.css">
+</head>
+
+<body>
+
+    <div class="fixed-title">
+        Lost in Tra(i)nstation
+    </div>
+</div>
+
+<div class="animated-bg">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+
+
+<nav class="topnav">
+    <div class="logo"></div>
+    <div class="nav-links"></div>
+</nav>
+
+
+<section class="hero">
+    <h1>Welkom op mijn projectdocumentatie!</h1>
+  <div class="intro-box">
+    <p>
+        Ik ben <strong>Melissa Halat</strong>, student in <strong>1GDM1</strong>.  
+        Op deze website documenteer ik mijn ontwerpproces en projecten voor het vak
+        <em>Prototyping Tools</em>, waarbij ik mijn stappen van idee tot uitwerking toon.
+        Daarnaast presenteer ik hier het eindresultaat van mijn opdrachten.
+    </p>
+</div>
+
+    <a href="doc.html" class="doc-bar">
+        Bekijk mijn documentatie
+    </a>
+</section>
+
+
+
+<main class="container">
+
+    <img src="public/img/img1.jpg" alt="Project afbeelding">
+
+ 
+
+    <section class="card">
+        <h2>PSN projectdocumentatie</h2>
+        <p>Melissa Halat 1 GDM 1</p>
+    </section>
+
+</main>
+
+
+<div class="cookie-banner" id="cookieBanner">
+    <span>🍪 Deze website gebruikt cookies voor een betere ervaring.</span>
+    <button id="acceptCookies">Akkoord</button>
+</div>
+
+
+<div class="cookie-icon" id="cookieIcon">🍪</div>
+
+
+<script>
+const banner = document.getElementById("cookieBanner");
+const btn = document.getElementById("acceptCookies");
+const icon = document.getElementById("cookieIcon");
+
+if (localStorage.getItem("cookiesAccepted")) {
+    banner.style.display = "none";
+}
+
+btn.addEventListener("click", () => {
+    localStorage.setItem("cookiesAccepted", "true");
+    banner.style.display = "none";
+});
+
+icon.addEventListener("click", () => {
+    banner.style.display = "flex";
+});
+</script>
+
+</body>
+</html>
+

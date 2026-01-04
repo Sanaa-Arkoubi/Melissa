@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melissa Halat – Project Documentatie</title>
+
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/nav.css">
+</head>
+
+<body>
+
+<a href="index.html" class="back-home-fancy">
+    ← Terug naar home
+</a>
+
+<div class="animated-bg">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+
+<nav class="topnav">
+    <div class="logo"></div>
+    <div class="nav-links"></div>
+</nav>
+
+<nav class="topnav">
+    <div class="logo"></div>
+    <div class="nav-links"></div>
+</nav>
+
+
+<section class="hero">
+    <h1>Project weken!</h1>
+</section>
+<section class="project-download">
+   
+    <div class="link-buttons">
+        <a href="https://www.figma.com/design/SECiDn0QH4pPIucxmMd1BW/Untitled?node-id=18-2&t=1OD1SpRpO8HjA6Oq-1" target="_blank">Treinscherm 1</a>
+        <a href="https://www.figma.com/design/SECiDn0QH4pPIucxmMd1BW/Untitled?node-id=31-2&t=1OD1SpRpO8HjA6Oq-1" target="_blank">Treinscherm 2</a>
+        <a href="https://www.figma.com/design/SECiDn0QH4pPIucxmMd1BW/Untitled?node-id=133-2&t=1OD1SpRpO8HjA6Oq-1" target="_blank">Treinscherm 3</a>
+        <a href="https://www.figma.com/design/SECiDn0QH4pPIucxmMd1BW/Untitled?node-id=147-156&t=1OD1SpRpO8HjA6Oq-1" target="_blank">Treinscherm 4</a>
+        <a href="https://github.com/jouwproject" target="_blank">GitHub</a>
+    </div>
+</section>
+
+
+
+
+
+<main class="container">
+
+    
+
+    <section class="weeks">
+        <h2>Project Weken</h2>
+
+        <div class="weeks-grid">
+            <a href="week1.html" class="week-card">
+                <img src="public/img/week1.jpg" alt="">
+                <h3>Week 1</h3>
+            </a>
+
+            <a href="week2.html" class="week-card">
+                <img src="public/img/week2.jpg" alt="">
+                <h3>Week 2</h3>
+            </a>
+
+            <a href="week3.html" class="week-card">
+                <img src="public/img/week3.jpg" alt="">
+                <h3>Week 3</h3>
+            </a>
+
+            <a href="week4.html" class="week-card">
+                <img src="public/img/week4.jpg" alt="">
+                <h3>Week 4</h3>
+            </a>
+
+            <a href="week5.html" class="week-card">
+                <img src="public/img/week5.jpg" alt="">
+                <h3>Week 5</h3>
+            </a>
+
+            <a href="week6.html" class="week-card">
+                <img src="public/img/week6.jpg" alt="">
+                <h3>Week 6</h3>
+            </a>
+
+            <a href="week7.html" class="week-card">
+                <img src="public/img/week7.jpg" alt="">
+                <h3>Week 7</h3>
+            </a>
+
+            <a href="week8.html" class="week-card">
+                <img src="public/img/week8.jpg" alt="">
+                <h3>Week 8</h3>
+            </a>
+
+            <a href="week9.html" class="week-card">
+                <img src="public/img/week9.jpg" alt="">
+                <h3>Week 9</h3>
+            </a>
+
+            <a href="week10.html" class="week-card">
+                <img src="public/img/week10.jpg" alt="">
+                <h3>Week 10</h3>
+            </a>
+
+            <a href="week11.html" class="week-card">
+                <img src="public/img/week11.jpg" alt="">
+                <h3>Week 11</h3>
+            </a>
+
+            <a href="week12.html" class="week-card">
+                <img src="public/img/week12.jpg" alt="">
+                <h3>Week 12</h3>
+            </a>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>PSN projectdocumentatie</h2>
+        <p>Melissa Halat 1 GDM 1</p>
+    </section>
+
+</main>
+
+
+<div class="cookie-banner" id="cookieBanner">
+    <span>🍪 Deze website gebruikt cookies voor een betere ervaring.</span>
+    <button id="acceptCookies">Akkoord</button>
+</div>
+
+
+<div class="cookie-icon" id="cookieIcon">🍪</div>
+
+
+<script>
+const banner = document.getElementById("cookieBanner");
+const btn = document.getElementById("acceptCookies");
+const icon = document.getElementById("cookieIcon");
+
+if (localStorage.getItem("cookiesAccepted")) {
+    banner.style.display = "none";
+}
+
+btn.addEventListener("click", () => {
+    localStorage.setItem("cookiesAccepted", "true");
+    banner.style.display = "none";
+});
+
+icon.addEventListener("click", () => {
+    banner.style.display = "flex";
+});
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,418 @@
+:root {
+    --color-beige: #f5f0e9;
+    --color-dark: #2a2a2a;
+    --color-accent: #5c4033;
+}
+
+
+
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: var(--color-beige);
+    color: var(--color-dark);
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 0;
+}
+
+a {
+    color: var(--color-dark);
+    text-decoration: none;
+}
+
+
+
+.animated-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+
+    /* BACKGROUND IMAGE */
+    background-image: url("../public/img/achtergrond.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.animated-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(245, 240, 233, 0.555); /* beige overlay */
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+.animated-bg span {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #5c403314;
+    border-radius: 50%;
+    filter: blur(120px);
+    animation: float 25s infinite ease-in-out;
+}
+
+
+.animated-bg span:nth-child(1) {
+    top: -10%;
+    left: -10%;
+}
+
+.animated-bg span:nth-child(2) {
+    top: 40%;
+    left: 60%;
+    animation-delay: -8s;
+}
+
+.animated-bg span:nth-child(3) {
+    top: 70%;
+    left: 10%;
+    animation-delay: -15s;
+}
+
+@keyframes float {
+    0% { transform: translate(0,0); }
+    50% { transform: translate(40px,-60px); }
+    100% { transform: translate(0,0); }
+}
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px;
+}
+
+
+
+.hero {
+    padding: 120px 40px;
+    background: #ffffff9b;
+    backdrop-filter: blur(10px);
+}
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+}
+
+
+ 
+.hero h1 {
+    font-size: 48px;
+}
+
+
+.hero .light {
+    font-weight: 400;
+    opacity: 0.85;
+}
+
+
+
+
+.card {
+    background: #707668;
+    border-radius: 12px;
+    padding: 40px;
+    margin-top: 80px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+
+
+.weeks {
+    margin-top: 120px;
+}
+
+.weeks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+}
+
+.week-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.week-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.week-card img {
+    width: 100%;
+    height: 120px;   /* was 180px → maakt de kaartjes dunner */
+    object-fit: cover;
+    margin: 0;
+}
+
+
+.week-card h3 {
+    padding: 20px;
+}
+
+
+.cookie-banner {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 16px 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    z-index: 999;
+    font-size: 14px;
+}
+
+.cookie-banner button {
+    background: var(--color-accent);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+
+.cookie-icon {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 998;
+    font-size: 22px;
+}
+
+.doc-bar {
+    display: inline-block;
+    margin-top: 32px;
+    padding: 18px 36px;
+
+    background: #707668;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    border-radius: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.doc-bar:hover {
+    background: #515c43;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.back-home-fancy {
+    position: fixed;       
+    top: 90px;              
+    right: 32px;
+
+    padding: 12px 26px;
+    background: #707668;     
+    color: white;            
+    border: 1.5px solid #707668;
+
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    border-radius: 999px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+
+    z-index: 9999;          
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.35s ease;
+}
+
+.back-home-fancy:hover {
+    background: #535d44;     /* lichter groen/bruin bij hover */
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+}
+
+.intro-box {
+    max-width: 720px;
+    margin-top: 32px;
+    padding: 28px 36px;
+
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(8px);
+
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.intro-box p {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #3a3a3a;
+    font-weight: 400;
+}
+
+.intro-box strong {
+    font-weight: 600;
+}
+
+.intro-box em {
+    font-style: normal;
+    color: var(--color-accent);
+    font-weight: 500;
+}
+
+
+.fixed-title {
+    position: fixed;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #2a2a2a;
+    opacity: 0.75;
+
+    z-index: 99999;
+    pointer-events: none;
+
+    /* visueel anker → voorkomt "zweef-gevoel" */
+    text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+/* === Low-Fidelity schetsen fix === */
+.sketch-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sketch-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;      /* elk vakje even groot */
+    object-fit: contain;      /* hele afbeelding zichtbaar */
+    background-color: #f5f0e9;
+    padding: 12px;
+    margin: 0;
+}
+/* === Download treinscherm balk === */
+.project-download {
+    margin-top: 40px;      /* klein beetje onder Project */
+    text-align: center;
+}
+
+.download-bar {
+    display: inline-block;
+
+    padding: 18px 42px;
+    background: #707668;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    border-radius: 999px;   /* afgerond balkje */
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+
+    transition: all 0.35s ease;
+    cursor: pointer;
+}
+
+.download-bar:hover {
+    background: #535d44;
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+}
+
+/* === GitHub tekst eronder === */
+.github-link {
+    margin-top: 14px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.github-link a {
+    color: var(--color-accent);
+    font-weight: 500;
+}
+
+.github-link a:hover {
+    text-decoration: underline;
+}
+.project-download h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--color-dark);
+}
+
+.link-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.link-buttons a {
+    display: inline-block;
+    padding: 16px 36px;
+    background: #707668;           /* zelfde als download-bar */
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 999px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    transition: all 0.35s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.link-buttons a:hover {
+    background: #535d44;          /* zelfde hover als download-bar */
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+}
